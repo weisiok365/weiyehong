@@ -1,3 +1,4 @@
 学习git rm 命令
 git restore --staged *.*,取消从工作区到暂存区的添加
 取消文件在工作区的修改命令： git checkout -- *.*  ； git restore *.*
+git rm *.* ; git commit *.* -m "remove *.*" 删除库里的文件
