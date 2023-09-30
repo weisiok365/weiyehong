@@ -7,3 +7,5 @@ git rm *.* ; git commit *.* -m "remove *.*" 删除库里的文件
 
 回退，git reset --hard HEAD^^^ 几个^就退几步；HEAD~100,回退100步
 回退后恢复或定位到某修改点， git reste --hard ***** ;*****为SHA1计算出来的一个非常大的数字，用十六进制表示的commit id
+
+远程推送前，要配置 git remote add origin git@github.com:weisiok365/weiyehong.git
