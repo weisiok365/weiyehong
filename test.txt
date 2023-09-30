@@ -3,3 +3,4 @@ git restore --staged *.*,取消从工作区到暂存区的添加
 取消文件在工作区的修改命令： git checkout -- *.*  ； git restore *.*
 git rm *.* ; git commit *.* -m "remove *.*" 删除库里的文件
 添加到暂存区后，在工作区 rm / del *.* 操作后，可以通过 git checkout -- *.* 恢复到工作区
+*.*提交到库里后，删除工作区的git rm *.*操作后，想恢复到工作区：git restore --staged *.* ; git checkout -- *.* /git restore *.*
