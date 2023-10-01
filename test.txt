@@ -1,11 +1,24 @@
+	
 学习git rm 命令
-git restore --staged *.*,取消从工作区到暂存区的添加
-取消文件在工作区的修改命令： git checkout -- *.*  ； git restore *.*
-git rm *.* ; git commit *.* -m "remove *.*" 删除库里的文件
-添加到暂存区后，在工作区 rm / del *.* 操作后，可以通过 git checkout -- *.* 恢复到工作区
-*.*提交到库里后，删除工作区的git rm *.*操作后，想恢复到工作区：git restore --staged *.* ; git checkout -- *.* /git restore *.*
+
+工作区修改未添加到暂存区，恢复到未修改前的命令：git checkout -- *.*  ； git restore *.*
+
+已添加到暂存区了，要取消从工作区到暂存区的添加，用命令：git restore --staged *.*
+
+删除库里的文件，用下面两步命令：git rm *.* ; git commit *.* -m "remove *.*" 
+
+添加到暂存区后，在工作区执行了命令：rm / del *.* 操作后，可以通过 git checkout -- *.* 恢复到工作区
+
+*.*提交到库里后，删除工作区的 git rm *.* 操作后，想恢复到工作区：git restore --staged *.* ; git checkout -- *.* /git restore *.*
 
 回退，git reset --hard HEAD^^^ 几个^就退几步；HEAD~100,回退100步
 回退后恢复或定位到某修改点， git reste --hard ***** ;*****为SHA1计算出来的一个非常大的数字，用十六进制表示的commit id
 
 远程推送前，要配置 git remote add origin git@github.com:weisiok365/weiyehong.git
+远程推送：git push -u origin master 
+	第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，
+	还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令.
+	以后推送：git push origin master 就行了。
+
+
+tortoiseGit 软件使用配置 ，它是一个帮助使用git的一个图形化操作工具，相当地方便，单击鼠标右键会出来。 
