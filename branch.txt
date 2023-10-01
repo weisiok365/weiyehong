@@ -2,6 +2,8 @@
 
 1、创建并切换新分支 dev 两个命令：git checkout -b dev  ;   git switch -c dev 
 
-2、只创建一个新分支sec，命令： git branch sec 
+2、只创建新分支sec，命令： git branch sec 
 
-3、
+3、切换到分支sec, 两条命令：git checkout sec  / git switch sec 
+
+4、
