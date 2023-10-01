@@ -40,3 +40,8 @@ stash 用法
 8、删除修复现场信息：git stash apply , git stash drop  以上两个指令可用一个命令 git stash pop 
 9、在修复分支branchA前已经转出去的分支，仍然存在 issue-101这个问题的BUG，：一是重复前面方法修复一次；
 	二是Git专门提供了一个cherry-pick命令，让我们能复制一个特定的提交到当前分支 git cherry-pick + id 前面修复产生的
+	
+	
+开发一个新feature，最好新建一个分支；
+
+如果要丢弃一个没有被合并过的分支，可以通过git branch -D <name>强行删除；-d 参数可能会删除失败。	
