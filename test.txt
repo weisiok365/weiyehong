@@ -44,4 +44,8 @@ stash 用法
 	
 开发一个新feature，最好新建一个分支；
 
-如果要丢弃一个没有被合并过的分支，可以通过git branch -D <name>强行删除；-d 参数可能会删除失败。	
+如果要丢弃一个没有被合并过的分支，可以通过git branch -D <name>强行删除；-d 参数可能会删除失败。
+
+如果要关联本地一个分支与远程上分支（当然两者分支名称是一样的），git checkout -b dev origin/dev 
+dev 为本地分支，origin 是远程主分支，dev是在远程库上origin上的分支
+	
