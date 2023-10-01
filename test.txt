@@ -26,4 +26,6 @@
 	以后推送：git push origin master 就行了。
 
 
-tortoiseGit 软件使用配置 ，它是一个帮助使用git的一个图形化操作工具，相当地方便，单击鼠标右键会出来。 
+tortoiseGit 软件使用配置 ，它是一个帮助使用git的一个图形化操作工具，相当地方便，单击鼠标右键会出来。
+
+理解 git stash用法 
