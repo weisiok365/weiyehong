@@ -1,21 +1,15 @@
 学习git 分支管理
 
-1、创建并切换新分支 dev 两个命令：git checkout -b dev  ;   git switch -c dev 
+解决分支冲突问题
 
-2、只创建新分支sec，命令： git branch sec 
+<<<<<<< HEAD
+注：转到主分支上时，使用tortoiseGit软件的 "add" 功能能成功(有时也不能成功执行），转到次分支后，
+修改了某文件，再 tortoiseGit->add 不能执行。好奇怪？ 
 
-3、切换到分支sec, 两条命令：git checkout sec  / git switch sec 
+=======
+>>>>>>> sec
+当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。
 
-以上为自学后写的笔记，下面为复制的
+解决冲突就是把Git合并失败的文件手动编辑为我们希望的内容，再提交。
 
-查看分支：git branch
-
-创建分支：git branch <name>
-
-切换分支：git checkout <name>或者git switch <name>
-
-创建 + 切换分支：git checkout -b <name>或者git switch -c <name>
-
-合并某分支到当前分支：git merge <name>
-
-删除分支：git branch -d <name>
+用git log --graph命令可以看到分支合并图。git log --graph --pretty=oneline --abbrev-commit
