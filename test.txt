@@ -28,4 +28,15 @@
 
 tortoiseGit 软件使用配置 ，它是一个帮助使用git的一个图形化操作工具，相当地方便，单击鼠标右键会出来。
 
-理解 git stash用法 
+stash 用法
+
+1、正在一个分支dddd上进行工作，突然要求到以前其它分支上修复一个bug,当前dddd分支的工作也不适合提交。
+2、采用 git stash 命令把当前分支dddd的现场保护起来。
+3、检查保护是否成功，再用命令 git stash 看一下
+4、转到要修复的分支branchA上，并在该分支上创建新的修复分支issue-101
+5、转到分支issue-101上进行修复，并提交成功。
+6、转到修复分支branchA上，进行合并分支 issue-101，合并成功，表明修复成功
+7、查看修复现场信息，git stash list
+8、删除修复现场信息：git stash apply , git stash drop  以上两个指令可用一个命令 git stash pop 
+9、在修复分支branchA前已经转出去的分支，仍然存在 issue-101这个问题的BUG，：一是重复前面方法修复一次；
+	二是Git专门提供了一个cherry-pick命令，让我们能复制一个特定的提交到当前分支 git cherry-pick + id 前面修复产生的
