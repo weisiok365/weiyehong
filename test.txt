@@ -1,15 +1,20 @@
 	
 学习git rm 命令
 
-工作区修改未添加到暂存区，恢复到未修改前的命令：git checkout -- *.*  ； git restore *.*
+1、工作区修改未添加到暂存区，恢复到未修改前的命令：git checkout -- *.*  ； git restore *.*
 
-已添加到暂存区了，要取消从工作区到暂存区的添加，用命令：git restore --staged *.*
+2、已添加到暂存区了，要取消从工作区到暂存区的添加，只能用只能用只能用命令：git restore --staged *.*
 
-删除库里的文件，用下面两步命令：git rm *.* ; git commit *.* -m "remove *.*" 
+3、删除库里的文件，用下面两步命令：git rm *.* ; git commit *.* -m "remove *.*" 
 
-添加到暂存区后，在工作区执行了命令：rm / del *.* 操作后，可以通过 git checkout -- *.* 恢复到工作区
+4、添加到暂存区或提交到库里后，在工作区执行了命令：rm / del *.* 操作后，可以通过 git checkout -- *.* / git restore *.* 恢复到工作区
 
-*.*提交到库里后，删除工作区的 git rm *.* 操作后，想恢复到工作区：git restore --staged *.* ; git checkout -- *.* /git restore *.*
+5、*.*提交到库里后，删除工作区的 git rm *.* 操作后，想恢复到工作区：git restore --staged *.* ; git checkout -- *.* /git restore *.*
+
+6、工作区新建一个文件，未添加，执行 rm *.* 命令后，等于直接删除，git下无法恢复，与git 无关。但添加到staged区后，是可以恢复的，见上面4。
+
+
+
 
 回退，git reset --hard HEAD^^^ 几个^就退几步；HEAD~100,回退100步
 回退后恢复或定位到某修改点， git reste --hard ***** ;*****为SHA1计算出来的一个非常大的数字，用十六进制表示的commit id
